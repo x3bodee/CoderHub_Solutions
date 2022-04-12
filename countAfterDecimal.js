@@ -1,8 +1,6 @@
 function DecimalPlaces(num) {
     // write your code here
-    // let a= String(num).split('.')[1] || ''
-    // return a.length
-    return num.split('.')[1].length || String('').length
+    return num.split('.')[1].length || 0
   }
 
   console.log(DecimalPlaces('4.98'))
