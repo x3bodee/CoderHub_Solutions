@@ -6,17 +6,11 @@ const hundred = "hundred"
 
 function numToEng(n) {
   // write your code here
-  n+=""
-  if (n.length == 1){
-    console.log(oneDigit(n))
-}else if (n.length == 2){
-    console.log(twoDigit(n))
-    
-}else if (n.length == 3){
-      console.log(threeDigit(n))
-      
-  }else "wrong input"
-  
+  n += "";
+  if (n.length == 1) return oneDigit(n);
+  else if (n.length == 2) return twoDigit(n);
+  else if (n.length == 3) return threeDigit(n);
+  else "wrong input";
 }
 
 function oneDigit(n){
@@ -38,11 +32,4 @@ function twoDigit(n){
 function threeDigit(n){
     if(n.substring(1) == "00") return oneDigit(n.substring(0,1))+" "+hundred
     else return oneDigit(n.substring(0,1))+" "+hundred+" "+twoDigit(n.substring(1))
-}
-
-
-for (let i=0; i<1000;i++){
-    console.log(i+": ")
-    numToEng(i)
-
 }
