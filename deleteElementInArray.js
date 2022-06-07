@@ -1,10 +1,6 @@
 function deleteElementInArray(arr, index) {
     // write your code here
-    console.log(arr)
-    let indexOf = arr.indexOf(index)
-
-    arr.splice(indexOf,1)
-    
+    arr.splice(arr.indexOf(index),1)
     return arr
   }
 
